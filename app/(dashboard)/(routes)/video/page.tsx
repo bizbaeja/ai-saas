@@ -52,8 +52,7 @@ const VideoPage = () => {
     <div>
       <Heading
         title="Video Generation"
-        description="당신의 프롬프트를 비디오로 만들어보세요!
-        "
+        description="당신의 프롬프트를 비디오로 만들어보세요!"
         icon={VideoIcon}
         iconColor="text-orange-700"
         bgColor="bg-orange-700/10"
