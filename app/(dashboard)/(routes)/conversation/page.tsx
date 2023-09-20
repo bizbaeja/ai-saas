@@ -1,7 +1,7 @@
 "use client";
 import * as z from "zod";
 import axios from "axios";
-import {useState} from "react";
+import {use, useState} from "react";
 import {useRouter } from "next/navigation";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {Heading} from "@/components/heading";
@@ -17,8 +17,10 @@ import { BotAvatar } from "@/components/bot-avatar";
 import {cn} from "@/lib/utils";
 import  Empty from "@/components/empty";
 import { ChatCompletionRequestMessage } from "openai";
+import { useProModal } from "@/app/hooks/use-pro-modal";
 
 const ConversationPage =()=> {
+const proModal = useProModal(); 
 const router = useRouter();
 const [messages,setMessages] = useState<ChatCompletionRequestMessage[]>([]);
 const form = useForm<z.infer<typeof formSchema>>({
@@ -39,7 +41,9 @@ const onSubmit = async (values: z.infer<typeof formSchema>)=>{
       
       form.reset();
    }catch(error:any){
-    //TODO: open Pro model
+    if(error?.response?.status === 403){
+        proModal.onOpen();
+    }
     console.log(error)
    }finally{
         router.refresh();
