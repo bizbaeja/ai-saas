@@ -71,7 +71,7 @@ const Sidebar = ({
                     src="/logo.png"
                     className="rounded-xl"/>
                   </div>
-                  <h1 className={cn("text-2xl font-bold", montserrat.className)}>Baeja is Genius</h1>
+                  <h1 className={cn("text-2xl font-bold", montserrat.className)}>AlJalDDak</h1>
                 </Link>
                 <div className="space-y-1">
                     {routes.map((route)=>(
