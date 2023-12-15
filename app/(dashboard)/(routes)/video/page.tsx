@@ -86,7 +86,7 @@ const VideoPage = () => {
                     <Input
                       className="border-0 outline-none focus-visible:ring-0 focus-visible:ring-transparent"
                       disabled={isLoading} 
-                      placeholder="강물에서 헤엄치는 연어를 보고 싶어요." 
+                      placeholder="영어로 입력해 주세요." 
                       {...field}
                     />
                   </FormControl>
