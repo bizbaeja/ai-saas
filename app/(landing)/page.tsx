@@ -10,7 +10,7 @@ const font = Poppins({
 const LandingPage =()=> {
     return(
     
-        <div className="flex items-center h-full w-full p-8 mx-auto bg-rose-100">
+        <div className="h-full flex flex-col items-center justify-center space-y-6 p-8 mx-auto bg-rose-100">
         <div className='flex items-center gap-x-7 hover:opacity-75 transition '>
          
             <div className="ml-[50px]">
